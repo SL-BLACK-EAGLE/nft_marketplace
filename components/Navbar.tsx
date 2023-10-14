@@ -9,7 +9,12 @@ import images from '../assets';
 
 const MenuItems = ({ isMobile, active, setActive }) => {
   const generateLink = () => {
-
+    switch (i) {
+      case 0: return '/';
+      case 1: return '/listed';
+      case 2: return '/my-nfts';
+      default: return '/';
+    }
   };
   return (
     <ul className={`list-none flexCenter flex-row ${isMobile && 'flex-col h-full'}
@@ -25,7 +30,7 @@ const MenuItems = ({ isMobile, active, setActive }) => {
             : 'dark:text-nft-gray-3 text-nft-gray-2'}
                     `}
         >
-          <Link href="">{item}</Link>
+          <Link href={generateLink(i)}>{item}</Link>
         </li>
       ))}
     </ul>
@@ -34,7 +39,7 @@ const MenuItems = ({ isMobile, active, setActive }) => {
 
 const Navbar = () => {
   const { theme, setTheme } = useTheme();
-  const [active, setActive] = useState(false);
+  const [active, setActive] = useState('Explore NFTs');
 
   return (
     <nav className="flexBetween w-full fixed z-10 p-4 flex-row border-b dark:bg-nft-dark bg-white dark:border-nft-black-1 border-nft-gray-1">

@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 const Home = () => (
   <main>
-    <Link href="/">Back</Link>
+    <Link href="/new">new</Link>
   </main>
 );
 export default Home;
