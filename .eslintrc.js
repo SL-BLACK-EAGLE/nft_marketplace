@@ -4,7 +4,6 @@ module.exports = {
     es2021: true,
   },
   extends: [
-    'next',
     'next/core-web-vitals',
     'airbnb',
   ],
