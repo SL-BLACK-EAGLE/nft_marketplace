@@ -5,10 +5,21 @@ import { useRouter } from 'next/router';
 import { useTheme } from 'next-themes';
 import Link from 'next/link';
 import Image from 'next/image';
+import Button from '@/components/ui/Button';
 import images from '../assets';
 
-const MenuItems = ({ isMobile, active, setActive }) => {
-  const generateLink = () => {
+type GenerateLinkParams ={
+  i: number
+}
+
+interface MenuItemsParams {
+    isMobile: boolean;
+    active: string;
+    setActive: (item: string) => void;
+}
+
+const MenuItems = ({ isMobile, active, setActive } : MenuItemsParams) => {
+  const generateLink = ({ i }: GenerateLinkParams) => {
     switch (i) {
       case 0: return '/';
       case 1: return '/listed';
@@ -23,17 +34,28 @@ const MenuItems = ({ isMobile, active, setActive }) => {
       {['Explore NFTs', 'Listed NFTs', 'My NFTs'].map((item, i) => (
         <li
           key={i}
-          onClick={() => {}}
+          onClick={() => {
+            setActive(item);
+          }}
           className={`flex flex-row items-center font-poppins font-semibold text-base dark:hover:text-white hover:text-nft-dark mx-3
               ${active === item
             ? 'dark:text-white text-nft-black-1'
             : 'dark:text-nft-gray-3 text-nft-gray-2'}
                     `}
         >
-          <Link href={generateLink(i)}>{item}</Link>
+          <Link href={generateLink({ i })}>{item}</Link>
         </li>
       ))}
     </ul>
+  );
+};
+
+const ButtonGroup = () => {
+  const hasConnected = false;
+  return hasConnected ? (
+    <Button btnName="Create" classStyle="mx-2 rounded-xl" />
+  ) : (
+    <Button classStyle="mx-2 rounded-xl" btnName="Create" />
   );
 };
 
@@ -78,9 +100,10 @@ const Navbar = () => {
         </div>
       </div>
       <div className="md:hidden flex">
-        <ul className="list-none flexCenter flex-row">
-          <MenuItems active={active} setActive={setActive} />
-        </ul>
+        <MenuItems active={active} setActive={setActive} />
+        <div className="ml-4">
+          <ButtonGroup />
+        </div>
       </div>
     </nav>
   );
