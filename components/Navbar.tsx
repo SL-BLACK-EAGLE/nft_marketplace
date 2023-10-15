@@ -137,7 +137,7 @@ const Navbar = () => {
               height={25}
               alt="cross"
               onClick={() => setIsOpen(false)}
-              style={theme === 'light' ? { filter: 'invert(1)' } : {}}
+              style={theme === 'light' ? { filter: 'invert(2)' } : { }}
             />
           ) : (
             <Image
@@ -147,7 +147,7 @@ const Navbar = () => {
               height={25}
               alt="menu"
               onClick={() => setIsOpen(true)}
-              style={theme === 'light' ? { filter: 'invert(1)' } : {}}
+              style={theme === 'light' ? { filter: 'invert(2)' } : { }}
             />
           )}
         {isOpen && (
