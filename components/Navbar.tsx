@@ -12,18 +12,7 @@ type GenerateLinkParams ={
   i: number
 }
 
-interface ButtonGroupParams {
-    setActive: (item: string) => void;
-    router: any;
-}
-
-interface MenuItemsParams {
-    isMobile: boolean;
-    active: string;
-    setActive: (item: string) => void;
-}
-
-const MenuItems = ({ isMobile, active, setActive } : MenuItemsParams) => {
+const MenuItems = ({ isMobile, active, setActive }) => {
   const generateLink = ({ i }: GenerateLinkParams) => {
     switch (i) {
       case 0: return '/';
@@ -55,7 +44,7 @@ const MenuItems = ({ isMobile, active, setActive } : MenuItemsParams) => {
   );
 };
 
-const ButtonGroup = ({ setActive, router }: ButtonGroupParams) => {
+const ButtonGroup = ({ setActive, router }) => {
   const hasConnected = true;
   return hasConnected ? (
     <Button
