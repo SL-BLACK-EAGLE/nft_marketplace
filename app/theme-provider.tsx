@@ -1,8 +1,13 @@
 'use client';
 
 import { ThemeProvider } from 'next-themes';
+import React from 'react';
 
-const ThemeProviderWrapper = ({ children }) => (
+type ThemeProviderWrapperProps = {
+    children: React.ReactNode
+}
+
+const ThemeProviderWrapper = ({ children }: ThemeProviderWrapperProps) => (
   <ThemeProvider attribute="class">
     {children}
   </ThemeProvider>
