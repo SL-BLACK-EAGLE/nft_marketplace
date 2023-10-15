@@ -12,7 +12,18 @@ type GenerateLinkParams ={
   i: number
 }
 
-const MenuItems = ({ isMobile, active, setActive }) => {
+type MenuItemsParams = {
+    isMobile: boolean,
+    active: string,
+    // eslint-disable-next-line no-unused-vars
+    setActive: (item: string) => void
+}
+type ButtonGroupParams = {
+    // eslint-disable-next-line no-unused-vars
+    setActive: (item: string) => void,
+    router: any
+}
+const MenuItems = ({ isMobile, active, setActive }: MenuItemsParams) => {
   const generateLink = ({ i }: GenerateLinkParams) => {
     switch (i) {
       case 0: return '/';
@@ -44,7 +55,7 @@ const MenuItems = ({ isMobile, active, setActive }) => {
   );
 };
 
-const ButtonGroup = ({ setActive, router }) => {
+const ButtonGroup = ({ setActive, router }: ButtonGroupParams) => {
   const hasConnected = true;
   return hasConnected ? (
     <Button
