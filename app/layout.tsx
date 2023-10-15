@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 
 import ThemeProviderWrapper from '@/app/theme-provider';
 import { Providers } from '@/app/providers';
+import React from 'react';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
