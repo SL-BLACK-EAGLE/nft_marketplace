@@ -130,29 +130,25 @@ const Navbar = () => {
       <div className="hidden md:flex ml-2">
         {isOpen
           ? (
-            <Link className={`link ${theme === 'light' && 'filter invert'}`} href="/">
-              <Image
-                src={images.cross}
-                objectFit="contain"
-                width={25}
-                height={25}
-                alt="cross"
-                onClick={() => setIsOpen(false)}
-                // className={theme === 'light' && 'filter invert'}
-              />
-            </Link>
+            <Image
+              src={images.cross}
+              objectFit="contain"
+              width={25}
+              height={25}
+              alt="cross"
+              onClick={() => setIsOpen(false)}
+              style={theme === 'light' ? { filter: 'invert(1)' } : {}}
+            />
           ) : (
-            <Link className={`link ${theme === 'light' && 'filter invert'}`} href="/">
-              <Image
-                src={images.menu}
-                objectFit="contain"
-                width={25}
-                height={25}
-                alt="menu"
-                onClick={() => setIsOpen(true)}
-                // className={theme === 'light' && 'filter invert'}
-              />
-            </Link>
+            <Image
+              src={images.menu}
+              objectFit="contain"
+              width={25}
+              height={25}
+              alt="menu"
+              onClick={() => setIsOpen(true)}
+              style={theme === 'light' ? { filter: 'invert(1)' } : {}}
+            />
           )}
         {isOpen && (
           <div className="fixed inset-0 top-65 dark:bg-nft-dark bg-white z-10 nav-h flex justify-between flex-col">
