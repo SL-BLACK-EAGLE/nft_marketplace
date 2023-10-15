@@ -10,11 +10,13 @@
   },
   "dependencies": {
     "@next/eslint-plugin-next": "^13.5.4",
+    "@nextui-org/react": "^2.1.13",
     "@nomiclabs/hardhat-ethers": "latest",
     "@nomiclabs/hardhat-waffle": "latest",
     "@openzeppelin/contracts": "latest",
     "axios": "latest",
     "ethers": "latest",
+    "framer-motion": "^10.16.4",
     "hardhat": "latest",
     "ipfs-http-client": "latest",
     "next": "latest",
