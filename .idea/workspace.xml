@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bae1859c-4846-4e69-8d25-70a02dc5a59d" name="Changes" comment="remove unused elements, make path correctly">
+    <list default="true" id="bae1859c-4846-4e69-8d25-70a02dc5a59d" name="Changes" comment="footer complete">
+      <change afterPath="$PROJECT_DIR$/components/Banner.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Footer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(root)/(home)/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(root)/(home)/page.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +91,7 @@
       <updated>1697428054597</updated>
       <workItem from="1697428055640" duration="13751000" />
       <workItem from="1697449917125" duration="521000" />
-      <workItem from="1697459169173" duration="2633000" />
+      <workItem from="1697459169173" duration="5756000" />
     </task>
     <task id="LOCAL-00001" summary="changed project to no typescript">
       <option name="closed" value="true" />
@@ -107,7 +109,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697444438260</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="footer complete">
+      <option name="closed" value="true" />
+      <created>1697465364318</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1697465364318</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -117,6 +127,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="changed project to no typescript" />
     <MESSAGE value="remove unused elements, make path correctly" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove unused elements, make path correctly" />
+    <MESSAGE value="footer complete" />
+    <option name="LAST_COMMIT_MESSAGE" value="footer complete" />
   </component>
 </project>

@@ -1,5 +1,6 @@
 import Navbar from './Navbar';
 import Footer from './Footer';
+import Banner from './Banner';
 import Button from './ui/Button';
 
-export { Navbar, Footer, Button };
+export { Navbar, Footer, Button, Banner };
