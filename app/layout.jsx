@@ -1,5 +1,5 @@
 import './globals.css';
-import Theme from '@/app/theme-provider';
+import Theme from './theme-provider.jsx';
 
 export const metadata = {
   title: 'NFT Marketplace',

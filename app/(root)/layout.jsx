@@ -1,5 +1,5 @@
 import Script from 'next/script';
-import { Footer, Navbar } from '@/components';
+import { Footer, Navbar } from '../../components';
 
 const MainLayout = ({ children }) => (
   <main className="dark:bg-nft-dark bg-white min-h-screen">
