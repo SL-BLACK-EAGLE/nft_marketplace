@@ -1,6 +1,6 @@
 import React from 'react';
 
 const Page = () => (
-  <div>Listed-Page</div>
+  <div>My NFT Page</div>
 );
 export default Page;

@@ -1,6 +1,8 @@
 import React from 'react';
 
 const Page = () => (
-  <div>Create NFT Page</div>
+  <div>
+    <h1>Create NFTs</h1>
+  </div>
 );
 export default Page;
