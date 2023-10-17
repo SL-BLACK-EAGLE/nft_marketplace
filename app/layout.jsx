@@ -1,5 +1,6 @@
 import './globals.css';
 import Theme from './theme-provider.jsx';
+import Providers from './provider';
 
 export const metadata = {
   title: 'NFT Marketplace',
@@ -10,7 +11,9 @@ const RootLayout = ({ children }) => (
   <html lang="en">
     <body>
       <Theme>
-        {children}
+        <Providers>
+          {children}
+        </Providers>
       </Theme>
     </body>
   </html>
