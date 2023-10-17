@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import { useTheme } from 'next-themes';
-import { Banner, CreatorCard } from '../../../components';
+import { Banner, CreatorCard, NFTCard } from '../../../components';
 import images from '../../../assets';
 // eslint-disable-next-line import/no-unresolved
 import { makeId } from '@/utils/makeId';
@@ -43,7 +43,7 @@ const Home = () => {
   });
 
   return (
-    <main className="flex justify-center sm:px-4 p-12">
+    <div className="flex justify-center sm:px-4 p-12">
       <div className="w-full minmd:w-4/5">
         <Banner
           bannerName="Discover, Collect, and Sell Extraordinary NFTs"
@@ -104,8 +104,32 @@ const Home = () => {
             </div>
           </div>
         </div>
+        <div className="mt-10">
+          <div className="flexBetween mx-4 xs:mx-0 minlg:mx-8 sm:flex-col sm:items-start">
+            <h1 className="flex-1 font-poppins dark:text-white text-nft-black-1 text-2xl minlg:text-4xl
+            ml-4 font-semibold sm:mb-4"
+            >Hot Bids
+            </h1>
+            <div>Searchbar</div>
+          </div>
+          <div className="mt-3 w-full flex flex-wrap justify-start md:justify-center">
+            {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((i) => (
+              <NFTCard
+                key={`nft-${i}`}
+                nft={{
+                  i,
+                  name: `Nifty NFT ${i}`,
+                  seller: `0x${makeId(3)}...${makeId(4)}`,
+                  owner: `0x${makeId(3)}...${makeId(4)}`,
+                  price: (10 - i * 0.534).toFixed(2),
+                  description: 'Cool NFT on Sale',
+                }}
+              />
+            )) }
+          </div>
+        </div>
       </div>
-    </main>
+    </div>
   );
 };
 export default Home;
