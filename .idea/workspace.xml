@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bae1859c-4846-4e69-8d25-70a02dc5a59d" name="Changes" comment="footer complete">
-      <change afterPath="$PROJECT_DIR$/components/Banner.jsx" afterDir="false" />
+    <list default="true" id="bae1859c-4846-4e69-8d25-70a02dc5a59d" name="Changes" comment="Top sellers part complete">
+      <change afterPath="$PROJECT_DIR$/components/CreatorCard.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/makeId.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/(root)/(home)/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(root)/(home)/page.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +93,8 @@
       <updated>1697428054597</updated>
       <workItem from="1697428055640" duration="13751000" />
       <workItem from="1697449917125" duration="521000" />
-      <workItem from="1697459169173" duration="5756000" />
+      <workItem from="1697459169173" duration="8456000" />
+      <workItem from="1697523653027" duration="11911000" />
     </task>
     <task id="LOCAL-00001" summary="changed project to no typescript">
       <option name="closed" value="true" />
@@ -117,7 +120,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697465364318</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Banner complete">
+      <option name="closed" value="true" />
+      <created>1697468580375</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1697468580375</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -128,6 +139,8 @@
     <MESSAGE value="changed project to no typescript" />
     <MESSAGE value="remove unused elements, make path correctly" />
     <MESSAGE value="footer complete" />
-    <option name="LAST_COMMIT_MESSAGE" value="footer complete" />
+    <MESSAGE value="Banner complete" />
+    <MESSAGE value="Top sellers part complete" />
+    <option name="LAST_COMMIT_MESSAGE" value="Top sellers part complete" />
   </component>
 </project>
