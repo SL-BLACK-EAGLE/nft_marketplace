@@ -7,6 +7,7 @@ import { useTheme } from 'next-themes';
 import images from '../../../assets';
 
 const Page = () => {
+  // eslint-disable-next-line no-unused-vars
   const [fileUrl, setFileUrl] = useState(null);
   const { theme } = useTheme();
 

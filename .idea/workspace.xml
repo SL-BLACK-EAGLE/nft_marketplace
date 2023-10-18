@@ -4,16 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bae1859c-4846-4e69-8d25-70a02dc5a59d" name="Changes" comment="init nextUI, create Loading Skeleton">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/material_theme_project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
+    <list default="true" id="bae1859c-4846-4e69-8d25-70a02dc5a59d" name="Changes" comment="make file upload box with dropzone">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(root)/(home)/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(root)/(home)/page.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/(root)/create-nft/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(root)/create-nft/page.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/NFTCard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/NFTCard.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +108,7 @@
       <workItem from="1697563183409" duration="1070000" />
       <workItem from="1697597042140" duration="4135000" />
       <workItem from="1697601963170" duration="648000" />
-      <workItem from="1697603596902" duration="7808000" />
+      <workItem from="1697603596902" duration="8921000" />
     </task>
     <task id="LOCAL-00001" summary="changed project to no typescript">
       <option name="closed" value="true" />
@@ -173,7 +166,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697554959596</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="make file upload box with dropzone">
+      <option name="closed" value="true" />
+      <created>1697613299077</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1697613299077</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -188,6 +189,7 @@
     <MESSAGE value="Top sellers part complete" />
     <MESSAGE value="Hot bid part-1 complete" />
     <MESSAGE value="init nextUI, create Loading Skeleton" />
-    <option name="LAST_COMMIT_MESSAGE" value="init nextUI, create Loading Skeleton" />
+    <MESSAGE value="make file upload box with dropzone" />
+    <option name="LAST_COMMIT_MESSAGE" value="make file upload box with dropzone" />
   </component>
 </project>
