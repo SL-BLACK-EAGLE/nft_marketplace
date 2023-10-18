@@ -5,10 +5,16 @@ import { useDropzone } from 'react-dropzone';
 import Image from 'next/image';
 import { useTheme } from 'next-themes';
 import images from '../../../assets';
+import { Button, Input } from '../../../components';
 
 const Page = () => {
-  // eslint-disable-next-line no-unused-vars
   const [fileUrl, setFileUrl] = useState(null);
+  const [formInput, setFormInput] = useState({
+    name: '',
+    description: '',
+    price: '',
+  });
+
   const { theme } = useTheme();
 
   const onDrop = useCallback(() => {
@@ -37,6 +43,8 @@ const Page = () => {
     ${isDragReject && 'border-file-reject'}`,
     [isDragActive, isDragAccept, isDragReject],
   );
+
+  console.log(formInput);
 
   return (
     <div className="flex justify-center sm:px-4 p-12">
@@ -101,6 +109,31 @@ const Page = () => {
               </aside>
             )}
           </div>
+        </div>
+        <Input
+          inputType="input"
+          title="Name"
+          placeholder="NFT Name"
+          handleClick={(e) => setFormInput({ ...formInput, name: e.target.value })}
+        />
+        <Input
+          inputType="textarea"
+          title="Description"
+          placeholder="NFT Description"
+          handleClick={(e) => setFormInput({ ...formInput, description: e.target.value })}
+        />
+        <Input
+          inputType="number"
+          title="Price"
+          placeholder="NFT Price"
+          handleClick={(e) => setFormInput({ ...formInput, price: e.target.value })}
+        />
+        <div className="mt-7 w-full flex justify-end">
+          <Button
+            btnName="Create NFT"
+            handleClick={() => {}}
+            classStyles="rounded-lg"
+          />
         </div>
       </div>
     </div>
