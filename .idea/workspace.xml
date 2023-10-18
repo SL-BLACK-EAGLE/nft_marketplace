@@ -5,17 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bae1859c-4846-4e69-8d25-70a02dc5a59d" name="Changes" comment="init nextUI, create Loading Skeleton">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/(root)/(home)/[id]/page.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/(root)/(home)/loading.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/provider.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/ui/LoadingSkeleton.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/material_theme_project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/(root)/(home)/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(root)/(home)/page.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(root)/create-nft/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(root)/create-nft/page.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/NFTCard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/NFTCard.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,11 +28,20 @@
       </list>
     </option>
   </component>
+  <component name="FormatOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="OptimizeOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
@@ -55,6 +62,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "code.cleanup.on.save": "true",
     "git-widget-placeholder": "main",
     "js.linters.configure.manually.selectedeslint": "true",
     "node.js.detected.package.eslint": "true",
@@ -65,7 +73,9 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_interpreter_path": "node",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "editing.templates",
+    "prettierjs.PrettierConfiguration.Package": "/Users/macintosh/WebstormProjects/nft_marketplace/node_modules/prettier",
+    "rearrange.code.on.save": "true",
+    "settings.editor.selected.configurable": "settings.javascript.linters.eslint",
     "ts.external.directory.path": "/Applications/WebStorm.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external",
     "vue.rearranger.settings.migration": "true"
   }
@@ -101,7 +111,11 @@
       <workItem from="1697428055640" duration="13751000" />
       <workItem from="1697449917125" duration="521000" />
       <workItem from="1697459169173" duration="8456000" />
-      <workItem from="1697523653027" duration="24482000" />
+      <workItem from="1697523653027" duration="27073000" />
+      <workItem from="1697563183409" duration="1070000" />
+      <workItem from="1697597042140" duration="4135000" />
+      <workItem from="1697601963170" duration="648000" />
+      <workItem from="1697603596902" duration="7808000" />
     </task>
     <task id="LOCAL-00001" summary="changed project to no typescript">
       <option name="closed" value="true" />
@@ -151,7 +165,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697551266250</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="init nextUI, create Loading Skeleton">
+      <option name="closed" value="true" />
+      <created>1697554959596</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1697554959596</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

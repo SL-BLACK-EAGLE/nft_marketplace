@@ -1,13 +1,14 @@
 'use client';
 
-import { useEffect, useRef, useState, Suspense } from 'react';
+import { Suspense, useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import { useTheme } from 'next-themes';
 import { Banner, CreatorCard, NFTCard } from '../../../components';
 import images from '../../../assets';
 // eslint-disable-next-line import/no-unresolved
 import { makeId } from '@/utils/makeId';
-import Loading from './loading';
+// import Loading from './loading';
+import LoadingSkeleton from '../../../components/ui/LoadingSkeleton';
 
 const Home = () => {
   const [hideButtons, setHideButtons] = useState(false);
@@ -53,14 +54,13 @@ const Home = () => {
           childStyle="md:text-4xl sm:text-3xl xs:text-2xl text-left"
         />
         <div>
-          <h1 className="font-poppins dark:text-white text-nft-black-1 text-2xl minlg:text-4xl
+          <h1
+            className="font-poppins dark:text-white text-nft-black-1 text-2xl minlg:text-4xl
          ml-4 font-semibold xs:ml-0"
-          >Best Creators
-          </h1>
-          <div
-            className="flex-1 relative max-w-full flex mt-3"
-            ref={parentRef}
           >
+            Best Creators
+          </h1>
+          <div className="flex-1 relative max-w-full flex mt-3" ref={parentRef}>
             <div
               className="flex flex-row w-max overflow-x-scroll no-scrollbar select-none"
               ref={scrollRef}
@@ -75,45 +75,51 @@ const Home = () => {
                 />
               ))}
               {!hideButtons && (
-              <>
-                <div
-                  className="absolute w-8 h-8 minlg:w-12 minlg:h-12 top-45 cursor-pointer left-0"
-                  onClick={() => handleScroll('left')}
-                >
-                  <Image
-                    src={images.left}
-                    alt="left_arrow"
-                    layout="fill"
-                    objectFit="contain"
-                    className={theme === 'light' ? 'filter invert' : undefined}
-                  />
-                </div>
-                <div
-                  className="absolute w-8 h-8 minlg:w-12 minlg:h-12 top-45 cursor-pointer right-0"
-                  onClick={() => handleScroll('right')}
-                >
-                  <Image
-                    src={images.right}
-                    alt="right_arrow"
-                    layout="fill"
-                    objectFit="contain"
-                    className={theme === 'light' ? 'filter invert' : undefined}
-                  />
-                </div>
-              </>
+                <>
+                  <div
+                    className="absolute w-8 h-8 minlg:w-12 minlg:h-12 top-45 cursor-pointer left-0"
+                    onClick={() => handleScroll('left')}
+                  >
+                    <Image
+                      src={images.left}
+                      alt="left_arrow"
+                      layout="fill"
+                      objectFit="contain"
+                      className={
+                        theme === 'light' ? 'filter invert' : undefined
+                      }
+                    />
+                  </div>
+                  <div
+                    className="absolute w-8 h-8 minlg:w-12 minlg:h-12 top-45 cursor-pointer right-0"
+                    onClick={() => handleScroll('right')}
+                  >
+                    <Image
+                      src={images.right}
+                      alt="right_arrow"
+                      layout="fill"
+                      objectFit="contain"
+                      className={
+                        theme === 'light' ? 'filter invert' : undefined
+                      }
+                    />
+                  </div>
+                </>
               )}
             </div>
           </div>
         </div>
         <div className="mt-10">
           <div className="flexBetween mx-4 xs:mx-0 minlg:mx-8 sm:flex-col sm:items-start">
-            <h1 className="flex-1 font-poppins dark:text-white text-nft-black-1 text-2xl minlg:text-4xl
+            <h1
+              className="flex-1 font-poppins dark:text-white text-nft-black-1 text-2xl minlg:text-4xl
             ml-4 font-semibold sm:mb-4"
-            >Hot Bids
+            >
+              Hot Bids
             </h1>
             <div>Searchbar</div>
           </div>
-          <Suspense fallback={<Loading />}>
+          <Suspense fallback={<LoadingSkeleton />}>
             <div className="mt-3 w-full flex flex-wrap justify-start md:justify-center">
               {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((i) => (
                 <NFTCard
@@ -127,7 +133,7 @@ const Home = () => {
                     description: 'Cool NFT on Sale',
                   }}
                 />
-              )) }
+              ))}
             </div>
           </Suspense>
         </div>
