@@ -8,7 +8,7 @@ import images from '../../../assets';
 import { Button, Input } from '../../../components';
 
 const Page = () => {
-  const [fileUrl, setFileUrl] = useState(null);
+  const [fileUrl] = useState(null);
   const [formInput, setFormInput] = useState({
     name: '',
     description: '',
