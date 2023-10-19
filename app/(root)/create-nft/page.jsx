@@ -8,7 +8,8 @@ import images from '../../../assets';
 import { Button, Input } from '../../../components';
 
 const Page = () => {
-  const [fileUrl] = useState(null);
+  // eslint-disable-next-line no-unused-vars
+  const [fileUrl, setFileUrl] = useState(null);
   const [formInput, setFormInput] = useState({
     name: '',
     description: '',
