@@ -1,13 +1,14 @@
 'use client';
 
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useTheme } from 'next-themes';
 import Image from 'next/image';
 import Link from 'next/link';
 
+// eslint-disable-next-line import/no-unresolved
+import { NFTContext } from 'context/NFTContext';
 import images from '../assets';
-// import { NFTContext } from '../context/NFTContext';
 import Button from './ui/Button';
 
 const MenuItems = ({ isMobile, active, setActive, setIsOpen }) => {
@@ -54,9 +55,9 @@ const MenuItems = ({ isMobile, active, setActive, setIsOpen }) => {
 };
 
 const ButtonGroup = ({ setActive, router }) => {
-  const hasConnected = true;
+  const { connectWallet, currentAccount } = useContext(NFTContext);
 
-  return hasConnected ? (
+  return currentAccount ? (
     <Button
       btnName="Create"
       classStyles="mx-2 rounded-xl"
@@ -70,8 +71,7 @@ const ButtonGroup = ({ setActive, router }) => {
       classStyles="mx-2 rounded-xl"
       btnName="Connect"
       handleClick={() => {
-        setActive('');
-        router.push('/create-nft');
+        connectWallet();
       }}
     />
   );
