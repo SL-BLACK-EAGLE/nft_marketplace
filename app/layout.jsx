@@ -1,4 +1,6 @@
 import './globals.css';
+// eslint-disable-next-line import/no-unresolved
+import { NFTProvider } from 'context/NFTContext';
 import Theme from './theme-provider.jsx';
 import Providers from './provider';
 
@@ -10,11 +12,11 @@ export const metadata = {
 const RootLayout = ({ children }) => (
   <html lang="en">
     <body>
-      <Theme>
-        <Providers>
-          {children}
-        </Providers>
-      </Theme>
+      <NFTProvider>
+        <Theme>
+          <Providers>{children}</Providers>
+        </Theme>
+      </NFTProvider>
     </body>
   </html>
 );
