@@ -12,7 +12,7 @@
     "@nextui-org/react": "^2.1.13",
     "@nomiclabs/hardhat-ethers": "latest",
     "@nomiclabs/hardhat-waffle": "latest",
-    "@openzeppelin/contracts": "latest",
+    "@openzeppelin/contracts": "^4.5.0",
     "axios": "latest",
     "ethers": "latest",
     "framer-motion": "^10.16.4",

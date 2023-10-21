@@ -4,16 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bae1859c-4846-4e69-8d25-70a02dc5a59d" name="Changes" comment="init hardhat, and write the functions for NFTMarketplace with Solidity">
-      <change afterPath="$PROJECT_DIR$/.secret" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contracts/NFTMarketplace.sol" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hardhat.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/deploy.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/Lock.js" afterDir="false" />
+    <list default="true" id="bae1859c-4846-4e69-8d25-70a02dc5a59d" name="Changes" comment="deploy smart contract with localhost">
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/context/constants.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(root)/create-nft/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(root)/create-nft/page.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/NFTMarketplace.sol" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/NFTMarketplace.sol" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hardhat.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/hardhat.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/deploy.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/deploy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Lock.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/Lock.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,34 +55,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;code.cleanup.on.save&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;js.linters.configure.manually.selectedeslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/macintosh/WebstormProjects/nft_marketplace/node_modules/prettier&quot;,
-    &quot;rearrange.code.on.save&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.linters.eslint&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Applications/WebStorm.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "code.cleanup.on.save": "true",
+    "git-widget-placeholder": "main",
+    "javascript.nodejs.core.library.configured.version": "18.18.1",
+    "javascript.nodejs.core.library.typings.version": "18.18.1",
+    "js.linters.configure.manually.selectedeslint": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "node",
+    "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "/Users/macintosh/WebstormProjects/nft_marketplace/node_modules/prettier",
+    "rearrange.code.on.save": "true",
+    "settings.editor.selected.configurable": "settings.javascript.linters.eslint",
+    "ts.external.directory.path": "/Applications/WebStorm.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/context" />
       <recent name="$PROJECT_DIR$/app/(root)/(home)" />
       <recent name="$PROJECT_DIR$/app/(root)" />
       <recent name="$PROJECT_DIR$/app" />
@@ -117,7 +121,11 @@
       <workItem from="1697601963170" duration="648000" />
       <workItem from="1697603596902" duration="14593000" />
       <workItem from="1697683127501" duration="1067000" />
-      <workItem from="1697690914089" duration="8085000" />
+      <workItem from="1697690914089" duration="11699000" />
+      <workItem from="1697706011634" duration="550000" />
+      <workItem from="1697729600456" duration="896000" />
+      <workItem from="1697730503435" duration="3000" />
+      <workItem from="1697866091582" duration="3968000" />
     </task>
     <task id="LOCAL-00001" summary="changed project to no typescript">
       <option name="closed" value="true" />
@@ -207,7 +215,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697643889470</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="init hardhat, and write the functions for NFTMarketplace with Solidity">
+      <option name="closed" value="true" />
+      <created>1697702333814</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1697702333814</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -225,6 +241,7 @@
     <MESSAGE value="make file upload box with dropzone" />
     <MESSAGE value="Create NFT page &amp; input fields complete" />
     <MESSAGE value="init hardhat, and write the functions for NFTMarketplace with Solidity" />
-    <option name="LAST_COMMIT_MESSAGE" value="init hardhat, and write the functions for NFTMarketplace with Solidity" />
+    <MESSAGE value="deploy smart contract with localhost" />
+    <option name="LAST_COMMIT_MESSAGE" value="deploy smart contract with localhost" />
   </component>
 </project>
