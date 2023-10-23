@@ -1,25 +1,31 @@
 'use client';
 
-import { useCallback, useMemo, useState } from 'react';
+import { useCallback, useContext, useMemo, useState } from 'react';
 import { useDropzone } from 'react-dropzone';
 import Image from 'next/image';
 import { useTheme } from 'next-themes';
+import { useRouter } from 'next/navigation';
 import images from '../../../assets';
 import { Button, Input } from '../../../components';
 
-const Page = () => {
-  // eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line import/no-unresolved
+import { NFTContext } from '@/context/NFTContext';
+
+const CreateNFT = () => {
   const [fileUrl, setFileUrl] = useState(null);
   const [formInput, setFormInput] = useState({
     name: '',
     description: '',
     price: '',
   });
-
   const { theme } = useTheme();
+  const { uploadToIPFS, createNFT } = useContext(NFTContext);
+  const router = useRouter();
+  const onDrop = useCallback(async (acceptedFile) => {
+    const url = await uploadToIPFS(acceptedFile[0]);
 
-  const onDrop = useCallback(() => {
-    // upload image t ipfs
+    console.log({ url });
+    setFileUrl(url);
   }, []);
 
   const {
@@ -41,11 +47,10 @@ const Page = () => {
     rounded-md border-dashed cursor-pointer
     ${isDragActive && 'border-file-active'}
     ${isDragAccept && 'border-file-accept'}
-    ${isDragReject && 'border-file-reject'}`,
-    [isDragActive, isDragAccept, isDragReject],
+    ${isDragReject && 'border-file-reject'}`[
+  (isDragActive, isDragAccept, isDragReject)
+],
   );
-
-  console.log(formInput);
 
   return (
     <div className="flex justify-center sm:px-4 p-12">
@@ -98,13 +103,12 @@ const Page = () => {
               </div>
             </div>
             {fileUrl && (
-              <aside>
+              <aside className="h-96">
                 <div>
-                  <Image
+                  <img
                     src={fileUrl}
-                    alt="asset_file"
-                    width={100}
-                    height={100}
+                    alt="Asset_file"
+                    className="w-full h-96 object-cover"
                   />
                 </div>
               </aside>
@@ -132,7 +136,7 @@ const Page = () => {
         <div className="mt-7 w-full flex justify-end">
           <Button
             btnName="Create NFT"
-            handleClick={() => {}}
+            handleClick={() => createNFT(formInput, fileUrl, router)}
             classStyles="rounded-lg"
           />
         </div>
@@ -140,4 +144,4 @@ const Page = () => {
     </div>
   );
 };
-export default Page;
+export default CreateNFT;
