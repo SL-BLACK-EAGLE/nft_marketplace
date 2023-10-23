@@ -47,9 +47,8 @@ const CreateNFT = () => {
     rounded-md border-dashed cursor-pointer
     ${isDragActive && 'border-file-active'}
     ${isDragAccept && 'border-file-accept'}
-    ${isDragReject && 'border-file-reject'}`[
-  (isDragActive, isDragAccept, isDragReject)
-],
+    ${isDragReject && 'border-file-reject'}`,
+    [isDragActive, isDragAccept, isDragReject],
   );
 
   return (
